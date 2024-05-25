@@ -1,0 +1,17 @@
+<div class="Index ui text container segment"
+  v-show="db.config.inited">
+
+  <h1 class="ui horizontal divider header">
+    {{ $t('Sign-In Sheet Generator') }}
+  </h1>
+  
+  <InputPanel 
+    ref="InputPanel"
+    :db="db">
+  </InputPanel>
+
+  <PrintComponent 
+    ref="PrintComponent"
+    :db="db">
+  </PrintComponent>
+</div>

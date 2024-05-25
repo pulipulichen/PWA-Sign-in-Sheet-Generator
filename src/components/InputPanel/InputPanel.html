@@ -1,0 +1,14 @@
+<div class="InputPanel ui form">
+  <div class="field">
+    <label for="inputHeader">{{ $t('Header') }}</label>
+    <textarea id="inputHeader" name="inputHeader" v-model="db.localConfig.header"></textarea>
+  </div>
+
+  <div class="field">
+    <label for="inputNameListText">
+      {{ $t('Name List') }}
+      <a href="./assets/name-list.csv"
+    </label>
+    <textarea id="inputNameListText" name="inputNameListText" v-model="db.localConfig.nameListText"></textarea>
+  </div>
+</div>
