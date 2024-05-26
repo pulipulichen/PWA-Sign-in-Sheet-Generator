@@ -5,6 +5,9 @@ let config = {
 
   inited: false,
 
+  printFilenameLimitLength: 20,
+  printFilenameFooter: ' sign-in sheet',
+  printFilenamePrependDate: true,
 }
 
 // ----------------------------------------------------------------

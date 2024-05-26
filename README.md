@@ -22,4 +22,4 @@ https://pulipulichen.github.io/PWA-Sign-in-Sheet-Generator/
 
 # Citation
 
-@TODO Citation APA
+Chen, Y.-T. (2024). *PWA-Sign-in-Sheet-Generator* (20240526.165542) [Computer software]. Zenodo. [https://doi.org/10.5281/ZENODO.11312600](https://doi.org/10.5281/ZENODO.11312600)

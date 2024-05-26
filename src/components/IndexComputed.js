@@ -94,15 +94,20 @@ export default function (app) {
     let columns = []
     let row = []
 
+    let layoutRowNumber = Number(this.db.localConfig.layoutRowNumber)
+    let layoutColumnNumber = Number(this.db.localConfig.layoutColumnNumber)
+
+    // console.log(this.db.localConfig.layoutColumnNumber)
+
     this.computedNameListArray.forEach((item, i) => {
       row.push(item)
 
-      if (i % this.db.localConfig.layoutRowNumber === (this.db.localConfig.layoutRowNumber - 1) ) {
+      if (i % layoutRowNumber === (layoutRowNumber - 1) ) {
         columns.push(row)
 
         row = []
 
-        if (columns.length === this.db.localConfig.layoutColumnNumber ) {
+        if (columns.length === layoutColumnNumber ) {
           pages.push(columns)
 
           columns = []
@@ -113,25 +118,29 @@ export default function (app) {
     // ----------
 
     if (row.length > 0) {
-      while (row.length < this.db.localConfig.layoutRowNumber) {
+      while (row.length < layoutRowNumber) {
         row.push(null)
       }
 
       columns.push(row)
     }
-
+    
+    // console.log(pages)
     
     if (columns.length > 0) {
-      while (columns.length < this.db.localConfig.layoutColumnNumber) {
+      while (columns.length < layoutColumnNumber ) {
         let emptyRow = [...this.emptyRow]
         columns.push(emptyRow)
       }
 
-      pages.push(columns)
+      pages.push(columns) 
     }
+
+    // console.log(pages)
 
     // ----------
 
+    // return JSON.stringify(pages)
     return pages
   }
 
@@ -139,7 +148,9 @@ export default function (app) {
   app.computed.emptyRow = function () {
     let row = []
 
-    for (let i = 0; i < this.db.localConfig.layoutRowNumber; i++) {
+    let layoutRowNumber = Number(this.db.localConfig.layoutRowNumber)
+
+    for (let i = 0; i < layoutRowNumber; i++) {
       row.push(null)
     }
 

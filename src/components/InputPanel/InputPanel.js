@@ -12,6 +12,9 @@ let app = {
     'db.localConfig.locale'() {
       this.$i18n.locale = this.db.localConfig.locale;
     },
+    // 'db.localConfig.header'() {
+    //   this.updateDocumentTitle()
+    // },
   },
   computed: {
     computedColumns () {
@@ -22,7 +25,6 @@ let app = {
     }
   },
   mounted() {
-    
   },
   methods: {
     computedColumnButtonClassList (col) {
@@ -44,10 +46,13 @@ let app = {
 
       if (this.db.localConfig.cellTemplate.indexOf(colTag) > -1) {
         return false
-      }
+      } 
 
-      this.db.localConfig.cellTemplate = this.db.localConfig.cellTemplate.trim() + '\n' + colTag
-    }
+      if (this.db.localConfig.cellTemplate.trim() !== '') {
+        this.db.localConfig.cellTemplate = this.db.localConfig.cellTemplate.trim() + '\n'
+      }
+      this.db.localConfig.cellTemplate = this.db.localConfig.cellTemplate + colTag
+    },
   }
 }
 

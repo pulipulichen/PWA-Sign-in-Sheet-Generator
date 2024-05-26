@@ -17,5 +17,12 @@ export default {
       throw new TypeError("Expected input to be a string");
     }
     return text.replace(/\n/g, '<br>\n');
+  },
+  removeHTMLTags: function (inputString) {
+    // Use a regular expression to match and remove HTML tags
+    if (!inputString || typeof(inputString) !== 'string') {
+      return inputString
+    }
+    return inputString.replace(/<\/?[^>]+(>|$)/g, "");
   }
 }
