@@ -1,3 +1,24 @@
-<div class="ComponentTemplate">
-  Hello World
+<div class="PrintComponent">
+  <div class="header" v-html="computedHeaderHTML"></div>
+
+  <template 
+    v-for="(page, i) in pageData">
+    <div class="print-page">
+
+      <div class="print-column"
+        :style="computedColumnWidth"
+        v-for="column in page">
+  
+        <div class="print-cell"
+          :style="computedCellHeight"
+          v-for="cell in column" v-html="buildCellHTML(cell)"></div>
+      </div>
+  
+    </div>
+
+    <div class="page-number">
+      {{ (i + 1)}}/{{ pageData.length }}
+    </div>
+  </template>
+  
 </div>

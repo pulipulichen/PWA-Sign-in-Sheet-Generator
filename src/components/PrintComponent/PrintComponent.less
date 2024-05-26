@@ -1,3 +1,62 @@
-.ComponentTemplate {
+.PrintComponent {
+  // display: none !important;
+
+  .header {
+    position:fixed;
+    top: 0;
+    width: 100vw;
+    text-align: center;
+    color: #666 !important;
+    font-style: italic;
+  }
+
+  .print-page {
+    // border: 1px solid red;
+
+    // padding-bottom: 1rem;
+
+    padding-top: 3rem;
+
+
+  }    
   
+  .page-number {
+    width: 100vw;
+    text-align: center;
+  }
+
+  .print-column {
+    // border: 1px solid green;
+
+    display: inline-block;
+    // width: calc(100vw / 3);
+
+    padding-bottom: 1rem;
+
+    &:last-child {
+      .print-cell {
+        border-right-width: 1px;
+      }
+    }
+  }
+
+  .print-cell {
+    border: 1px solid black;
+    border-right-width: 0;
+    border-bottom-width: 0;
+
+    overflow: hidden;
+    padding-left: 0.5rem;
+    color: #666;
+
+    &:last-child {
+      border-bottom-width: 1px;
+    }
+  }
+}
+
+@media print {
+  .PrintComponent {
+    display: block !important;
+  }
 }

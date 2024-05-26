@@ -11,5 +11,11 @@ export default {
 
     hash = Math.abs(hash)
     return hash;
+  },
+  nl2br: function (text) {
+    if (typeof text !== "string") {
+      throw new TypeError("Expected input to be a string");
+    }
+    return text.replace(/\n/g, '<br>\n');
   }
 }

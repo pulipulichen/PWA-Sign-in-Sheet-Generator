@@ -9,6 +9,10 @@ This is a progressive web application that generates sign-in sheets. Users can c
 
 @TODO 示意圖
 
+# Online Tool
+
+https://pulipulichen.github.io/PWA-Sign-in-Sheet-Generator/
+
 # Techniques
 
 - Vue.js: MVVM框架

@@ -7,8 +7,45 @@
   <div class="field">
     <label for="inputNameListText">
       {{ $t('Name List') }}
-      <a href="./assets/name-list.csv"
+      <a href="./assets/name-list.csv" target="name-list">
+        {{ $t('example')}}
+      </a>
     </label>
-    <textarea id="inputNameListText" name="inputNameListText" v-model="db.localConfig.nameListText"></textarea>
+    <textarea id="inputNameListText" 
+      name="inputNameListText" 
+      v-model="db.localConfig.nameListText"
+      onfocus="this.select()"></textarea>
+  </div>
+
+  <div class="field">
+    <label for="inputCellTemplate">{{ $t('Template') }}</label>
+    <div class="ui fluid buttons">
+      <button type="button"
+        v-for="col in computedColumns"
+        :class="computedColumnButtonClassList(col)"
+        @click="copyColumn(col)">
+        [{{col}}]
+      </button>
+    </div>
+    <textarea id="inputCellTemplate" 
+      name="inputCellTemplate" 
+      v-model="db.localConfig.cellTemplate"></textarea>
+  </div>
+
+  <div class="two fields">
+    <div class="eight wide field">
+      <label for="layoutColumnNumber">
+        {{ $t('Column Number') }}
+      </label>
+      <input type="number"
+        v-model="db.localConfig.layoutColumnNumber" />
+    </div>
+    <div class="eight wide field">
+      <label for="layoutRowNumber">
+        {{ $t('Row Number') }}
+      </label>
+      <input type="number"
+        v-model="db.localConfig.layoutRowNumber" />
+    </div>
   </div>
 </div>

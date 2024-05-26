@@ -162,7 +162,6 @@ let VueController = {
       }
       return true
     },
-
     restoreFromLocalStorage () {
       if (this.db.config.debug.enableRestore === false || 
           this.db.config.openFromAPI) {

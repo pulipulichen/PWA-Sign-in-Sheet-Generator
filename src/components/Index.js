@@ -100,4 +100,7 @@ let Index = {
   }
 }
 
+import IndexComputed from './IndexComputed'
+IndexComputed(Index)
+
 export default Index

@@ -16,7 +16,7 @@
 // Names of the two caches used in this version of the service worker.
 // Change to v2, etc. when you update any of the local resources, which will
 // in turn trigger the install event again.
-const PRECACHE = 'precache-v20240525-163140';
+const PRECACHE = 'precache-v20240526-072728';
 const RUNTIME = 'runtime';
 
 /**
@@ -39,12 +39,13 @@ const PRECACHE_URLS = [
   "dist/asset/icons.ttf",
   "dist/asset/icons.woff",
   "dist/asset/icons.woff2",
-  "dist/asset/loading.svg",
   "dist/asset/outline-icons.eot",
   "dist/asset/outline-icons.svg",
   "dist/asset/outline-icons.ttf",
   "dist/asset/outline-icons.woff",
   "dist/asset/outline-icons.woff2",
+  "dist/components/DataComponent.js",
+  "dist/components/DataComponent.js.map",
   "dist/components/InputPanel.js",
   "dist/components/InputPanel.js.map",
   "dist/components/PrintComponent.js",

@@ -14,13 +14,40 @@ let app = {
     },
   },
   computed: {
-    
+    computedColumns () {
+      if (this.db.config.inited === false) {
+        return []
+      }
+      return this.$parent.computedColumns
+    }
   },
   mounted() {
     
   },
   methods: {
-    
+    computedColumnButtonClassList (col) {
+      let classList = ['ui']
+
+      let colTag = `[${col}]`
+      // console.log({colTag, warning: this.db.localConfig.cellTemplate.indexOf(colTag)})
+      if (this.db.localConfig.cellTemplate.indexOf(colTag) === -1) {
+        classList.push('negative')
+      }
+
+      classList.push('button')
+
+      return classList
+    },
+    copyColumn (col) {
+      let colTag = `[${col}]`
+      this.db.utils.ClipboardUtils.copyPlainString(colTag)
+
+      if (this.db.localConfig.cellTemplate.indexOf(colTag) > -1) {
+        return false
+      }
+
+      this.db.localConfig.cellTemplate = this.db.localConfig.cellTemplate.trim() + '\n' + colTag
+    }
   }
 }
 

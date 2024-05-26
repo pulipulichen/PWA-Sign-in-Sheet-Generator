@@ -1,3 +1,16 @@
-.ComponentTemplate {
-  
+@media print {
+  .InputPanel {
+    display: none; 
+  }
+}
+
+.InputPanel {
+  textarea {
+    min-height: 1rem !important;
+    height: 6rem !important;
+
+    &#inputHeader {
+      height: auto !important;
+    }
+  }
 }
