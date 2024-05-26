@@ -7,7 +7,7 @@ This is a progressive web application that generates sign-in sheets. Users can c
 
 一個用來產生簽到表的PWA程式。使用者可以指定標頭、輸入名單資訊、指定簽到表的排版，然後產生適合列印的表格。
 
-@TODO 示意圖
+![](https://blogger.googleusercontent.com/img/a/AVvXsEiiluwF6JVZ8SatanrF5pzwC8i06gzDfczAvYNEX-Thh4F8cMxKlO81_nPm9vrFfGrHYnpwSUpod2ht_KDAWt7z_18pQNTjZ3Ii7928aZNgl9aRiqrOwgVcmf_cF9R9qhg5vG7VUSkMoGvg2dqD9qan4ioTD2RukRtWrEHbrpqdFcKsmAVuitxcWA)
 
 # Online Tool
 
