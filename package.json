@@ -39,7 +39,7 @@
     "url": "https://github.com/pulipulichen/PWA-Sign-in-Sheet-Generator/issues"
   },
   "homepage": "https://github.com/pulipulichen/PWA-Sign-in-Sheet-Generator#readme",
-  "doi": "10.5281/zenodo.11222774",
+  "doi": "10.5281/zenodo.11312600",
   "devDependencies": {
     "@babel/core": "7.5.5",
     "@babel/plugin-proposal-object-rest-spread": "7.5.5",

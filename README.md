@@ -1,5 +1,5 @@
 
-@TODO DOI
+[![DOI](https://zenodo.org/badge/805778982.svg)](https://zenodo.org/doi/10.5281/zenodo.11312600)
 
 # PWA-Sign-in-Sheet-Generator: 簽到表產生器
 
